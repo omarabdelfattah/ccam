@@ -17,7 +17,7 @@ use Mail;
 class account extends Controller
 {
     function index(){
-        $page_title = __("titles.login");
+        $page_title = __("pages.login");
         return view('dashboard.pages.login',compact('page_title'));
     }
 

@@ -9,7 +9,7 @@ use App\Models\User;
 class home extends Controller
 {
     public function index(){
-        $page_title = __("titles.home");
+        $page_title = __("names.home");
         return view('dashboard.pages.home',compact('page_title'));
     }
     public function change_language($lang){
