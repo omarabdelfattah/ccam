@@ -9,6 +9,7 @@ use App\Models\User;
 class home extends Controller
 {
     public function index(){
+        return redirect()->route('ports.edit');
         $page_title = __("names.home");
         return view('dashboard.pages.home',compact('page_title'));
     }

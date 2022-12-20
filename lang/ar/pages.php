@@ -10,4 +10,5 @@ return [
     'submit'  => 'إرسال',
     'update_success' => 'تم التحديث',
     'update_failed' => 'فشل التحديث',
+    'ports' => 'البورت'
 ];

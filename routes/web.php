@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\account; 
 use App\Http\Controllers\home; 
+use App\Http\Controllers\ports; 
+use App\Http\Controllers\site\index; 
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +34,10 @@ Route::group(['prefix' => 'dashboard' , 'middleware'=> 'SetLocale'],function(){
 
         Route::get('/change_language/{lang}' ,[home::class, 'change_language'])->where('lang', '[a-zA-Z]+')->name('settings.change_language');
 
+        Route::group(['prefix' => 'ports'],function(){
+            Route::get('/edit',[ports::class,'edit'])->name('ports.edit');
+            Route::patch('/',[ports::class,'update'])->name('ports.update');
+        });
 
         Route::group(['prefix' => 'account'],function(){
             Route::get('/edit',[account::class,'edit'])->name('account.edit');

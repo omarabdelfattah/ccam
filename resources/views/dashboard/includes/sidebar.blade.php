@@ -33,7 +33,16 @@
             </a>
           </li>
 
-       
+             
+          <li class="nav-item">
+            <a href="{{ Route('ports.edit') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                {{__('pages.ports')}}
+              </p>
+            </a>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
